@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<div class="jumbotron">
+  <h1 class="display-4">Topics</h1>
+  <p class="lead">Topics with easy to understand explations </p>
+  <a class="btn btn-primary btn-lg" href="{% url 'item_list' %}" role="button">View Topics</a>
+</div>
+{% endblock content %}

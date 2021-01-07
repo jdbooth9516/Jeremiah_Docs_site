@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Topics List{% endblock title %}
+{% block content %}
+<div class="card-columns"><!-- will need to change this to something better for my uses -->
+{% for item in object_list %}
+<div class="card">
+    <div class="card-body text-left">
+        <h2 class="card-title">{{ item.title }}</h2>
+        <h5 class="card-title">{{ item.description }}</h5>
+        <a href="{% url 'item_detail' item.pk %}" class="btn btn-primary">Read Topic</a>
+        <a href="{% url 'item_edit' item.pk %}" class="btn btn-info">Edit Topic</a>
+        <a href="{% url 'item_delete' item.pk %}" class="btn btn-warning">Delete Topic</a> 
+    </div>
+</div>
+{% endfor %}
+</div>
+{% endblock content %}
